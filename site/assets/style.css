@@ -14,19 +14,21 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; border-ra
 .wrap { width: min(960px, calc(100% - 80px)); margin-inline: auto; }
 .skip-link { position: absolute; left: 20px; top: -100px; padding: 8px 16px; background: #fff; z-index: 10; }
 .skip-link:focus { top: 12px; }
-.topbar { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 26px; border-bottom: 1px solid var(--line); }
-.wordmark { font-weight: 650; text-decoration: none; color: var(--ink); white-space: nowrap; }
+.topbar { display: flex; align-items: center; justify-content: flex-end; padding-block: 18px; border-bottom: 1px solid var(--line); }
 nav ul, .link-list { display: flex; flex-wrap: wrap; gap: 8px 24px; list-style: none; margin: 0; padding: 0; }
 nav a { font-size: 14px; color: var(--muted); text-decoration: none; display: inline-block; padding-block: 8px; }
 nav a:hover { color: var(--blue); text-decoration: underline; }
-.intro { padding: 76px 0 62px; max-width: 800px; }
-.eyebrow { margin: 0 0 15px; color: var(--muted); font-size: 12px; font-weight: 650; letter-spacing: .13em; text-transform: uppercase; }
+.intro { padding: 48px 0; max-width: 800px; }
+.name-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-bottom: 12px; }
 h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: -.035em; }
-h1 { font-size: clamp(44px, 6.4vw, 64px); line-height: 1.08; margin: 0 0 15px; }
-.role { font-size: 21px; margin: 0 0 25px; }
+h1 { font-size: clamp(28px, 3vw, 36px); line-height: 1.2; margin: 0; }
+.contact-links { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.contact-links a { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: var(--muted); }
+.contact-links a:hover { color: var(--blue); }
+.contact-links svg { display: block; width: 20px; height: 20px; }
+.role { font-size: 19px; margin: 0 0 25px; }
 .bio { max-width: 730px; margin: 0 0 16px; }
-.affiliation { font-size: 15px; color: var(--muted); margin: 0 0 28px; }
-.intro .link-list { font-size: 15px; }
+.affiliation { font-size: 15px; color: var(--muted); margin: 0; }
 .section { padding: 42px 0 48px; border-top: 1px solid var(--line); }
 .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 28px; }
 h2 { font-size: 32px; line-height: 1.2; margin: 0; }
@@ -50,11 +52,12 @@ h3 { font-size: 18px; line-height: 1.45; margin: 0 0 8px; font-weight: 650; lett
 footer { border-top: 1px solid var(--line); padding: 24px 0 35px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 12px; }
 @media (max-width: 700px) {
   .wrap { width: calc(100% - 40px); }
-  .topbar { align-items: flex-start; flex-direction: column; gap: 7px; padding-block: 20px 14px; }
+  .topbar { padding-block: 14px; }
   nav ul { column-gap: 19px; }
   nav a { font-size: 13px; }
-  .intro { padding: 48px 0 42px; }
-  .role { font-size: 19px; }
+  .intro { padding: 36px 0; }
+  .name-row { column-gap: 16px; }
+  .role { font-size: 18px; }
   .bio { font-size: 16px; }
   .section { padding: 32px 0 36px; }
   .section-heading { margin-bottom: 24px; }
